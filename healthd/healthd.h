@@ -74,7 +74,7 @@ struct healthd_config {
     int periodic_chores_interval_slow;
 
     android::String8 batteryStatusPath;
-    android::String8 batteryChargeTypePath;
+    android::String8 batteryChargeRatePath;
     android::String8 batteryHealthPath;
     android::String8 batteryPresentPath;
     android::String8 batteryCapacityPath;
@@ -110,7 +110,7 @@ struct healthd_config {
     #define HEALTHD_MAP_CONTINUE_SEARCH INT_MAX
 
     int (*mapBatteryStatusString)(const char *status);
-    int (*mapChargeTypeString)(const char *charge_type);
+    int (*mapChargeRateString)(const char *charge_rate);
 };
 
 // Global helper functions
