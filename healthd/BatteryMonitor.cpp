@@ -634,13 +634,6 @@ void BatteryMonitor::init(struct healthd_config *hc) {
                         mHealthdConfig->batteryStatusPath = path;
                 }
 
-                if (mHealthdConfig->batteryChargeTypePath.isEmpty()) {
-                    path.clear();
-                    path.appendFormat("%s/%s/charge_type", POWER_SUPPLY_SYSFS_PATH,
-                                      name);
-                    if (access(path, R_OK) == 0)
-                        mHealthdConfig->batteryChargeTypePath = path;
-                }
 
                 if (mHealthdConfig->batteryHealthPath.isEmpty()) {
                     path.clear();
